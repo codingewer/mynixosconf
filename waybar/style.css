@@ -1,0 +1,200 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  min-height: 1px;
+  font-weight: 600;
+  font-size: 14px;
+
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces {
+  border-radius: 10px;
+}
+
+#workspaces button {
+  transition: 0.5s ease-in;
+  color: #BFCFE7;
+  background: transparent;
+  font-weight: 900;
+
+}
+
+#workspaces button.persistent {
+  color: #7c818c;
+  font-size: 12px;
+}
+
+
+#workspaces button:hover {
+  transition: 0.5s ease-out;
+  color: #3CF2B0;
+  border-radius: 100%;
+  background: transparent;
+}
+
+#workspaces button.active {
+  transition: 0.5s ease-out;
+  color: #E61C5D;
+}
+
+
+#pulseaudio.muted {
+  background-color: #90b1b1;
+  color: #2a5c45;
+}
+
+
+#temperature.critical {
+  background-color: #eb4d4b;
+}
+
+
+#battery,
+#custom-gpu-usage,
+#backlight,
+#temperature,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#clock,
+#custom-power,
+#custom-swaync {
+  margin-right: 5px;
+  transition: none;
+  padding: 0px 10px;
+  border-radius: 5px;
+}
+
+
+.modules-left {
+  margin-left: 8px;
+  margin: 5px;
+  transition: none;
+  border-radius: 10px;
+  padding: 3px 10px;
+  background: linear-gradient(to right, rgba(78, 67, 118, 0.2) 50%, rgba(81, 127, 164, 0.2) 100%);
+
+}
+
+.modules-center {
+  margin: 5px;
+  transition: none;
+  border-radius: 10px;
+  padding: 3px 10px;
+  background: linear-gradient(to right, rgba(81, 127, 164, 0.2) 0%, rgba(43, 88, 118, 0.2) 50%);
+}
+
+.modules-right {
+  border-radius: 10px;
+  transition: none;
+  margin: 5px;
+  background: linear-gradient(-20deg, rgba(78, 67, 118, 0.2) 0%, rgba(81, 127, 164, 0.2) 100%);  
+  padding: 3px 10px;
+}
+
+
+#custom-power {
+  padding: 0px 15px;
+
+}
+
+#battery.charging {
+  color: #ffffff;
+  background-color: #5C8374;
+}
+
+#battery.warning:not(.charging) {
+  background-color: #ffbe61;
+  color: black;
+}
+
+#battery.critical:not(.charging) {
+  background: #26a65b;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+#backlight-slider slider, #pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0.1;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 100%;
+}
+
+#backlight-slider trough, #pulseaudio-slider trough {
+  min-height: 10px;
+  min-width: 80px;
+  border-radius: 5px;
+  background-color:  rgba(78, 67, 118, 0.5);
+}
+
+#backlight-slider highlight, #pulseaudio-slider highlight {
+  border-radius: 5px;
+  background: rgba(81, 127, 164, 0.7);
+}
+
+#backlight-slider, #pulseaudio-slider {
+  min-height: 0;
+  padding: 0;
+}
+
+#custom-cava,
+#tray {
+  border-left: 0px;
+  border-right: 0px;
+  font-family: "bargraph";
+  font-size: 14px;
+  border-radius: 10px;
+  margin-left: 5px;
+  font-size: 12px;
+  padding: 0px 10px;
+}
+
+#mpris {
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin-left: 5px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+#custom-weather {
+  padding: 0px 10px;
+  border-radius: 10px;
+  transition: none;
+}
+
+tooltip {
+  border-radius: 12px;
+  background: rgba(43, 48, 59, 0.9);
+  border: none;
+}
+tooltip label {
+  color: rgb(211, 211, 211);
+}
